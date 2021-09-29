@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./img/Beautiful-Celebration-Wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body * {
+  z-index: 1;
+}
+
+.year {
+  font-size: 200px;
+  z-index: -1;
+  opacity: 0.2;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  font-size: 60px;
+  margin: 150px 0 20px;
+}
+.count {
+  margin: 20px;
+}
+
+.count h2 {
+  font-size: 50px;
+}
+.count p {
+  font-size: 15px;
+}
+
+@media (max-width: 500px) {
+  * {
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .count {
+    margin: 10px;
+  }
+  .count h2 {
+    font-size: 25px;
+  }
+  .count p {
+    font-size: 10px;
+  }
+
+  .year {
+    font-size: 100px;
+    z-index: -1;
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
